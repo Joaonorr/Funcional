@@ -15,11 +15,7 @@ min3 a b c
         | otherwise = b
 
 main = do
-    print $ min3 1 2 3 == 1
-    print $ min3 2 1 3 == 1
-    print $ min3 3 4 2 == 2
-    print $ min3 2 5 4 == 2
-    -- a <- readLn :: IO Int
-    -- b <- readLn :: IO Int
-    -- c <- readLn :: IO Int
-    -- print $ min3 a b c
+    a <- readLn :: IO Int
+    b <- readLn :: IO Int
+    c <- readLn :: IO Int
+    print $ min3 a b c
