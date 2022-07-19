@@ -20,13 +20,14 @@
 
 elemento :: Int -> [Int] -> Int
 elemento x xs 
-            | x < 0 = xs !! (length xs) - x
+            | x < 0 = xs !!  (x + length xs)
             | otherwise = xs !! x
 main = do
     print $ elemento 2 [2,7,3,9] == 3
     print $ elemento 0 [2,7,3,9] == 2
     print $ elemento (-1) [2,7,3,9] == 9
     print $ elemento (-2) [2,7,3,9] == 3
+    print $ elemento (-2) [] == 3
     -- a <- readLn :: IO Int
     -- b <- readLn :: IO [Int]
     -- print $ elemento a b
