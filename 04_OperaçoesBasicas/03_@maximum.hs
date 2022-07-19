@@ -14,17 +14,12 @@
 -- Se existe mais de um
 -- use where pra calcular o máximo do resto
 -- use o if para retornar o maior ente o head e o resto
-
+maior :: [Int] -> Int
 maior xs
         | length xs == 1 = head xs
         | maior (tail xs) > head xs = maior $ tail xs 
         | otherwise = head xs
 
 main = do
-    print $ maior [4] == 4
-    print $ maior [5,1] == 5
-    print $ maior [5,7] == 7
-    print $ maior [1,2,7,1,5] == 7
-    print $ maior [1,2,3,1,5] == 5
---     a <- readLn :: IO [Int]
---     print $ maior a
+    a <- readLn :: IO [Int]
+    print $ maior a
